@@ -332,12 +332,22 @@ def generate_qr_pdf(asset_tags):
 # =============================
 st.set_page_config(page_title="Maamani Asset Management", layout="wide")
 # Custom header with logo + title
+import base64
+
+# Function to load image and convert to base64
+def get_base64_image(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
+# Convert logo
+logo_base64 = get_base64_image("images/maamani_Logo.png")
+
+# Custom header with logo + title
 st.markdown(
-    """
+    f"""
     <div style="display: flex; align-items: center;">
-        <img src="images/maamani_logo.png" width="60" style="margin-right: 15px;">
-        <h1 style="margin: 0;">
-        Maamani Asset Management System</h1>
+        <img src="data:image/png;base64,{logo_base64}" width="60" style="margin-right: 15px;">
+        <h1 style="margin: 0;">Maamani Asset Management System</h1>
     </div>
     """,
     unsafe_allow_html=True
