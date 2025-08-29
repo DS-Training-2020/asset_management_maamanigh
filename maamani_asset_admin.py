@@ -346,7 +346,7 @@ logo_base64 = get_base64_image("images/maamani_Logo.png")
 st.markdown(
     f"""
     <div style="display: flex; align-items: center;">
-        <img src="data:image/png;base64,{logo_base64}" width="60" style="margin-right: 15px;">
+        <img src="data:image/png;base64,{logo_base64}" width="200" style="margin-right: 15px;">
         <h1 style="margin: 0;">Maamani Asset Management System</h1>
     </div>
     """,
