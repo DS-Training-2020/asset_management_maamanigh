@@ -331,7 +331,17 @@ def generate_qr_pdf(asset_tags):
 # APP
 # =============================
 st.set_page_config(page_title="Maamani Asset Management", layout="wide")
-st.title("📦 Maamani Asset Management System")
+# Custom header with logo + title
+st.markdown(
+    """
+    <div style="display: flex; align-items: center;">
+        <img src="images/maamani_logo.png" width="60" style="margin-right: 15px;">
+        <h1 style="margin: 0;">
+        Maamani Asset Management System</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Initialize DB
 init_db()
