@@ -340,7 +340,7 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Convert logo
-logo_base64 = get_base64_image("images/maamani_Logo.png")
+logo_base64 = get_base64_image("images/maamani_logo.png")
 
 # Custom header with logo + title
 st.markdown(
